@@ -46,7 +46,7 @@ function sumOfTwoIntegers(num1, num2) {
 
 // Your code goes here...
 function isOneOfThemOrTheirSumIsFourty(num1, num2) {
-  if (num1 === 40 || num1 + num2 === 40) {
+  if (num1 === 40 || num2 === 40 || num1 + num2 === 40) {
     return true;
   } else {
     return false;
