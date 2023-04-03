@@ -41,13 +41,15 @@ const isNameInArray = (arr, name) => arr.includes(name);
 
 const logSecondsUpToMax = (max) => {
   let i = 0;
-  const timer = setInterval(function () {
-    if (i < max) {
-      console.log(++i);
-    } else {
-      clearInterval(timer);
+
+  const logAndIncrement = () => {
+    console.log(++i);
+    if (i >= max) {
+      clearInterval(interval);
     }
-  }, 1000);
+  };
+
+  const interval = setInterval(logAndIncrement, 1000);
 };
 
 // === TEST YOURSELF ===
